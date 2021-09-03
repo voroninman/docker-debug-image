@@ -57,6 +57,9 @@ spawn a shell in the sidecar debugging container with the copied pod's network a
 kubectl debug $POD_NAME -ti \
 	--image=voroninman/debug \
 	--share-processes \
-	--copy-to=$POD-debug \
+	--copy-to=$POD_NAME-debug \
 	-- bash
+
+# Cleanup when you're done
+kubectl delete pod $POD_NAME-debug
 ```

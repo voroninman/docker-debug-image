@@ -17,5 +17,11 @@ kubectl run debug-shell --rm -it --image voroninman/debug -- /bin/bash
 Get access to the host filesystem and network.
 
 ```bash
-docker run -ti --rm --privileged --net host -v /:/host voroninman/debug bash
+docker run -ti --rm --net host -v /:/host voroninman/debug bash
+```
+
+Get access to a container network.
+
+```bash
+docker run -ti --rm --net container:CONTAINER_ID voroninman/debug bash
 ```

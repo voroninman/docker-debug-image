@@ -1,6 +1,6 @@
 # Docker debug image
 
-A handy Docker image to troubleshoot from a Docker container.
+🔧 A handy Docker image to troubleshoot from a Docker container.
 
 ### Usage
 

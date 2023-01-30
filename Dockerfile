@@ -17,8 +17,12 @@ RUN apt-get update -qq \
     man \
     man-db \
     manpages-posix \
+    miller \
+    mysql-client \
     net-tools \
     netcat \
+    postgresql-client \
+    pv \
     screen \
     software-properties-common \
     strace \

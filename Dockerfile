@@ -1,6 +1,7 @@
 FROM ubuntu:focal
 
 WORKDIR /root
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update -qq \
     && apt-get install -y \
@@ -14,6 +15,7 @@ RUN apt-get update -qq \
     iproute2 \
     iputils-ping \
     jq \
+    less \
     man \
     man-db \
     manpages-posix \
@@ -23,11 +25,13 @@ RUN apt-get update -qq \
     netcat \
     postgresql-client \
     pv \
+    python3-pip \
     screen \
     software-properties-common \
     strace \
     tcpdump \
     traceroute \
     vim
+RUN pip install awscli
 
 CMD [ "sleep", "infinity" ]
